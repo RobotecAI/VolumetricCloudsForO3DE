@@ -374,9 +374,9 @@ namespace VolumetricClouds
                 const AZ::RHI::DrawListTag& drawListTag,
                 const AZ::Data::Instance<AZ::RPI::ShaderResourceGroup>& drawSrg)
     {
-        AZ::RHI::DrawPacketBuilder drawPacketBuilder;
+        AZ::RHI::DrawPacketBuilder drawPacketBuilder{ AZ::RHI::MultiDevice::AllDevices };
         drawPacketBuilder.Begin(nullptr);
-        drawPackerBuilder.SetGeometryView(&m_commonGeometryView);
+        drawPacketBuilder.SetGeometryView(&m_commonGeometryView);
         drawPacketBuilder.AddShaderResourceGroup(drawSrg->GetRHIShaderResourceGroup());
 
         AZ::RHI::DrawPacketBuilder::DrawRequest drawRequest;
