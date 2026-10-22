@@ -58,6 +58,7 @@ ly_add_target(
             Gem::Atom_RPI.Public
             Gem::AtomLyIntegration_CommonFeatures.Public
             Gem::ROS2.Static
+            Gem::ROS2Controllers.API
 )
 
 # Here add ${gem_name} target, it depends on the Private Object library and Public API interface
@@ -132,6 +133,7 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 Gem::AtomLyIntegration_CommonFeatures.Public
                 Gem::Atom_Utils.Static
                 Gem::ROS2.Static
+                Gem::ROS2Controllers.API
     )
 
     ly_add_target(
