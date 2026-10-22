@@ -21,7 +21,7 @@
         "Linux"
     ],
     "icon_path": "",
-    "requirements": "",
+    "requirements": "This Gem requires the ROS2 Gem and ROS2Controllers Gem to be installed.",
     "documentation_url": "",
     "dependencies": [
         "ROS2",
