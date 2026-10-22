@@ -57,9 +57,11 @@ ly_add_target(
             AZ::AzFramework
             Gem::Atom_RPI.Public
             Gem::AtomLyIntegration_CommonFeatures.Public
-            Gem::ROS2.Static
+            Gem::ROS2.API
             Gem::ROS2Controllers.API
 )
+
+target_depends_on_ros2_packages(${gem_name}.Private.Object rclcpp std_msgs)
 
 # Here add ${gem_name} target, it depends on the Private Object library and Public API interface
 ly_add_target(
@@ -132,8 +134,6 @@ if(PAL_TRAIT_BUILD_HOST_TOOLS)
                 Gem::Atom_Feature_Common.Public
                 Gem::AtomLyIntegration_CommonFeatures.Public
                 Gem::Atom_Utils.Static
-                Gem::ROS2.Static
-                Gem::ROS2Controllers.API
     )
 
     ly_add_target(
