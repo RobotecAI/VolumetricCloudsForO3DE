@@ -187,7 +187,7 @@ namespace VolumetricClouds
 
         AZ::Render::DirectionalLightConfigurationChangedEvent::Handler m_directionalLightConfigChangedEventHandler;
 
-        AZStd::unique_ptr<ROS2::IControlSubscriptionHandler> m_subscriptionHandler;
+        AZStd::unique_ptr<ROS2Controllers::IControlSubscriptionHandler> m_subscriptionHandler;
 
         float m_sunLightIntensity = 1.0f;
     };
